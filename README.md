@@ -1,2 +1,2 @@
 # welcome to foodmood.
-## this is a food swiping app, created by Elsie Zhu and Ron Varshavsky.
+## this is a food swiping app, created by elsie zhu and ron varshavsky.
