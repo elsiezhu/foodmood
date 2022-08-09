@@ -29,7 +29,7 @@ class FoodSpider(scrapy.Spider):
                     j = i + 1
                     while j < len(res) and res[j] != ")":
                         j += 1
-                    food = res[i+1:-1]
+                    food = res[i+1:j]
                 except:
                     food = ""
                 f.write(f"{country},{food}\n")
