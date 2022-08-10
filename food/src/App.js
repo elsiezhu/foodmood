@@ -14,9 +14,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path={'/'} >
-          <Homepage />
-        </Route>
+        <Route path={'/'} element={ <Homepage /> } />
       </Routes>
     </Router>
     // <div className="App">
