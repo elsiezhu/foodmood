@@ -3,6 +3,7 @@ import './App.css';
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Homepage from './components/pages/homepage'
+import Navbar from './components/navbar';
 
 
 function App() {
@@ -12,11 +13,14 @@ function App() {
   //         .then(res => setApiRes(res));
 
   return (
-    <Router>
-      <Routes>
-        <Route path={'/'} element={ <Homepage /> } />
-      </Routes>
-    </Router>
+    <div className="App">
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path={'/'} element={ <Homepage /> } />
+        </Routes>
+      </Router>
+    </div>
     // <div className="App">
     //   <header className="App-header">
     //     <img src={logo} className="App-logo" alt="logo" />
