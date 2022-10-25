@@ -21,13 +21,13 @@ function FoodCards() {
 
             {/* .map() is to loop through the array */}
             {food.map(food => (
-                <FoodCard>
+                <>
                     <div 
                     style={{backgroundImage: `url(${food.url})` }}
                     className="card">
                         <h3>{food.food}</h3>
                     </div>
-                </FoodCard>
+                </>
             ))}
         </div>
     );

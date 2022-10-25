@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  backend:
+    env_file:
+        "./mood/.env"
+    build:
+      context: ./mood
+      dockerfile: ./mood/Dockerfile
+    image: "5949f8fe663d"
+    ports:
+      - "9000:9000"
+  frontend:
+    build:
+      context: ./food
+      dockerfile: ./food/Dockerfile
+    image: "208d699f4ea6"
+    ports:
+      - "3000:3000"
