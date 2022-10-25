@@ -3,6 +3,7 @@ import './App.css';
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Homepage from './components/pages/homepage'
+import Navbar from './components/navbar';
 
 
 function App() {
@@ -12,27 +13,17 @@ function App() {
   //         .then(res => setApiRes(res));
 
   return (
-    <Router>
-      <Routes>
-        <Route path={'/'} element={ <Homepage /> } />
-      </Routes>
-    </Router>
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //     <p className="App-intro">Backend response: {apiRes}</p>
-    //     </p>
-    //     {/* <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a> */}
-    //   </header>
-    // </div>
+    <div className="App">
+      <Router>
+        <Navbar />
+        <Routes>
+
+
+          {/* // NOTE!!! KEEP THIS ROUTE AT THE VERY BOTTOM, OR ELSE ALL PAGES WILL DEFAULT TO "/" */}
+          <Route path={'/'} element={ <Homepage /> } />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 
